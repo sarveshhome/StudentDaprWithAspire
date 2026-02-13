@@ -1,6 +1,42 @@
 @StudentDaprWithAspire.API_HostAddress = http://localhost:5103
 
-GET {{StudentDaprWithAspire.API_HostAddress}}/weatherforecast/
+### Get all students
+GET {{StudentDaprWithAspire.API_HostAddress}}/api/students
 Accept: application/json
 
-###
+### Get student by ID
+GET {{StudentDaprWithAspire.API_HostAddress}}/api/students/1
+Accept: application/json
+
+### Create student
+POST {{StudentDaprWithAspire.API_HostAddress}}/api/students
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "age": 20
+}
+
+### Update student
+PUT {{StudentDaprWithAspire.API_HostAddress}}/api/students/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "John Updated",
+  "email": "john.updated@example.com",
+  "age": 21
+}
+
+### Patch student
+PATCH {{StudentDaprWithAspire.API_HostAddress}}/api/students/1
+Content-Type: application/json
+
+{
+  "Name": "John Doe",
+  "Email": "john@example.com"
+}
+
+### Delete student
+DELETE {{StudentDaprWithAspire.API_HostAddress}}/api/students/1
