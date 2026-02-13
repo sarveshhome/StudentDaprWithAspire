@@ -15,6 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\StudentDaprWithAspire.Application\StudentDaprWithAspire.Application.csproj" />
     <ProjectReference Include="..\StudentDaprWithAspire.Infrastructure\StudentDaprWithAspire.Infrastructure.csproj" />
+    <ProjectReference Include="..\StudentDaprWithAspire.ServiceDefaults\StudentDaprWithAspire.ServiceDefaults.csproj" />
   </ItemGroup>
 
 </Project>

@@ -39,6 +39,14 @@ StudentDaprWithAspire/
 dotnet run --project StudentDaprWithAspire.API
 ```
 
+## Run with Aspire
+
+```bash
+dotnet run --project StudentDaprWithAspire.AppHost
+```
+
+Aspire Dashboard: http://localhost:15000
+
 ## Run with Dapr
 
 ```bash
