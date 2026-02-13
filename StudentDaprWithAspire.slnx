@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="StudentDaprWithAspire.API/StudentDaprWithAspire.API.csproj" />
+  <Project Path="StudentDaprWithAspire.Application/StudentDaprWithAspire.Application.csproj" />
+  <Project Path="StudentDaprWithAspire.Domain/StudentDaprWithAspire.Domain.csproj" />
+  <Project Path="StudentDaprWithAspire.Infrastructure/StudentDaprWithAspire.Infrastructure.csproj" />
+</Solution>
