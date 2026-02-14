@@ -1,11 +1,15 @@
-using Microsoft.EntityFrameworkCore;
-using StudentDaprWithAspire.Domain.Entities;
+using Microsoft.Data.SqlClient;
 
 namespace StudentDaprWithAspire.Infrastructure.Data;
 
-public class ApplicationDbContext : DbContext
+public class SqlConnectionFactory
 {
-    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+    private readonly string _connectionString;
 
-    public DbSet<Student> Students { get; set; }
+    public SqlConnectionFactory(string connectionString)
+    {
+        _connectionString = connectionString;
+    }
+
+    public SqlConnection CreateConnection() => new SqlConnection(_connectionString);
 }
