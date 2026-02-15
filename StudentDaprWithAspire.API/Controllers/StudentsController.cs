@@ -37,6 +37,7 @@ public class StudentsController : ControllerBase
     }
 
     [HttpPost]
+    [IgnoreAntiforgeryToken]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<ActionResult<Student>> Create(Student student)
@@ -47,6 +48,7 @@ public class StudentsController : ControllerBase
     }
 
     [HttpPut("{id}")]
+    [IgnoreAntiforgeryToken]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -60,6 +62,7 @@ public class StudentsController : ControllerBase
     }
 
     [HttpPatch("{id}")]
+    [IgnoreAntiforgeryToken]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<Student>> Patch(int id, [FromBody] Dictionary<string, object> updates)
@@ -83,6 +86,7 @@ public class StudentsController : ControllerBase
     }
 
     [HttpDelete("{id}")]
+    [IgnoreAntiforgeryToken]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult> Delete(int id)
