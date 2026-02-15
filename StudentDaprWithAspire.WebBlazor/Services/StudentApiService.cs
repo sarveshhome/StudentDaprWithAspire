@@ -38,16 +38,9 @@ public class StudentApiService
 
     public async Task<Student?> CreateStudentAsync(Student student)
     {
-        try
-        {
-            var response = await _httpClient.PostAsJsonAsync("api/students", student);
-            response.EnsureSuccessStatusCode();
-            return await response.Content.ReadFromJsonAsync<Student>();
-        }
-        catch
-        {
-            return null;
-        }
+        var response = await _httpClient.PostAsJsonAsync("api/students", student);
+        response.EnsureSuccessStatusCode();
+        return await response.Content.ReadFromJsonAsync<Student>();
     }
 
     public async Task<Student?> UpdateStudentAsync(int id, Student student)
